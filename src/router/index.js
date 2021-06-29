@@ -14,6 +14,8 @@ import Axiosdemo from "../views/Axiosdemo";
 import newsIndex from "@/views/news/Index";
 import newsDetail from "@/views/news/Newsdetail";
 
+import ShopCar from "../views/ShopCar.vue";
+
 Vue.use(VueRouter);
 
 const routes = [
@@ -103,6 +105,11 @@ const routes = [
     name: "pick-area",
     component: () =>
       import(/* webpackChunkName: "eg" */ "../views/Pickarea.vue")
+  },
+  {
+    path: "/shop-car",
+    name: "shopcar",
+    component: ShopCar
   }
 ];
 

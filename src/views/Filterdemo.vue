@@ -18,7 +18,7 @@
         <span class="date">{{ date | formatDate("MM月DD日") }}</span>
         <span class="week">{{ Week }}</span>
       </div>
-      <div class="nlyear">{{ NlYear }}</div>
+      <div class="nlyear">{{ NlYear? NlYear : '辛丑年' }}</div>
     </div>
   </div>
 </template>
@@ -36,15 +36,19 @@ let week = "星期" + "日一二三四五六".charAt(nowDay.day());
 let year = nowDay.year();
 let month = nowDay.month() + 1;
 let day = nowDay.date();
+console.log(year, month, day)
 let lunarDate = getLunarDate(year + "-" + month + "-" + day); // '2019-11-8'
+console.log(lunarDate)
 let lunarDateString = getLunarDateString(lunarDate);
-let nlyear =
+console.log(lunarDate, lunarDateString, '-----')
+/* let nlyear =
   lunarDateString.tg +
   lunarDateString.dz +
   "年" +
   lunarDateString.month +
   "月" +
-  lunarDateString.day;
+  lunarDateString.day; */
+
 export default {
   name: "filter-demo",
   data() {
@@ -52,7 +56,7 @@ export default {
       now: nowDay,
       date: nowDay,
       Week: week,
-      NlYear: nlyear
+      // NlYear: nlyear
     };
   },
   filters: {

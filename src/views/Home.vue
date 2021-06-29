@@ -3,6 +3,14 @@
     <!-- <img alt="Vue logo" src="../assets/logo.png" /> -->
     我是首页
     <!--   想放个轮播加九宫格 -->
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <router-link to="/shop-car" class="link shopcarLink">进入购物车</router-link>
+    <router-view />
   </div>
 </template>
 
@@ -25,4 +33,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-</style>
+
+.shopcarLink {
+  font-size:14px;
+}
+ped>
